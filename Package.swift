@@ -5,12 +5,14 @@ import PackageDescription
 let package = Package(
     name: "Gimlet",
     products: [
-        .library(name: "Gimlet", targets: ["Gimlet"])
+        .library(name: "Gimlet", targets: ["Gimlet"]),
     ],
     dependencies: [
     ],
     targets: [
-        .target(name: "Gimlet", dependencies: []),
+        .target(name: "Gimlet", dependencies: ["Trie"]),
+        .target(name: "Trie", dependencies: []),
         .testTarget(name: "GimletTests", dependencies: ["Gimlet"]),
+        .testTarget(name: "TrieTests", dependencies: ["Trie"]),
     ]
 )
