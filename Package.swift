@@ -10,9 +10,9 @@ let package = Package(
     dependencies: [
     ],
     targets: [
-        .target(name: "Gimlet", dependencies: ["Trie"]),
-        .target(name: "Trie", dependencies: []),
+        .target(name: "Gimlet", dependencies: ["Strings"]),
+        .target(name: "Strings", dependencies: []),
         .testTarget(name: "GimletTests", dependencies: ["Gimlet"]),
-        .testTarget(name: "TrieTests", dependencies: ["Trie"]),
+        .testTarget(name: "StringsTests", dependencies: ["Strings"]),
     ]
 )
